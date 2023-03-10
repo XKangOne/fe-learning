@@ -5,18 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link ref="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
     
     <!-- 挂载到这 -->
     <div id = "root">
-        <div class="product-display">
+        <div  class="box" v-for ="(item,index) in details" ::key="index">
+          <div class="header">
+
+            <img :src ="item.image" class="activeClass" @mouseover="change(item)" @mouseleave="change(item)">
+            
+            <!-- <img v-if="item.finished" :src="item.image" > -->
+        </div>
+        <div class="avator">
+            <img :src = "item.imgs">
+            <p>{{item.name}}</p>
+        </div>
+
+        <div class="show" v-show="item.isShow && !item.finished">
+                <p class="d1">{{item.lable1}}</p>
+                <p class="d2">{{item.lable2}}</p>
+        </div>
+
+        <div class="content">
+            <p class="t1">{{item.subject}}</p>
+            <p class="t2">{{item.class}}</p>
+        </div>
+        </div>
+        <!-- <div class="product-display">
         <div class="product-container">
         <div class="product-image">
-            <img :src="image"/>
-        </div>
-        <div class="product-info">
+            <img :src="image">
+        </div> -->
+    <!-- <div class="product-info">
         <h1>{{product}}</h1>
         <p>{{description}}</p>
         <p v-show="inStock">In Stock</p>
@@ -24,9 +46,15 @@
         <a :href="url">Vue3 官网</a>
         <p v-if="inStock">in stock</p>
         <p v-else>Out of stock</p>
-    </div>
-</div>
-</div>
+        <ul>
+            <li v-for="detail in details">{{detail}}</li>
+        </ul>
+        <div>
+            <button :disabled="count<3">button</button>
+        </div>
+    </div> -->
+<!-- </div>
+</div> -->
 </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./main.js"></script>
