@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link ref="stylesheet" href="./styles.css">
+    <link ref="stylesheet" href="./styles.css"/>
 </head>
 <body>
     
     <!-- 挂载到这 -->
     <div id = "root">
+        <div class="product-display">
+        <div class="product-container">
+        <div class="product-image">
+            <img :src="image"/>
+        </div>
+        <div class="product-info">
         <h1>{{product}}</h1>
-        <span>{{product}}</span>
         <p>{{description}}</p>
+        <p v-show="inStock">In Stock</p>
+        <p style="display:none">In Stock</p>
+        <a :href="url">Vue3 官网</a>
+        <p v-if="inStock">in stock</p>
+        <p v-else>Out of stock</p>
     </div>
+</div>
+</div>
+</div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./main.js"></script>
     <!-- Mount app -->
