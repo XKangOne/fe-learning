@@ -1,4 +1,4 @@
-/* body {
+body {
   background-color: #f2f2f2;
   margin: 0px;
   font-family: tahoma;
@@ -184,8 +184,20 @@ ul {
   width: 220px;
   height: 220px;
   margin-bottom: 20px;
-} */
-*{
+}
+.color-circle{
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+  border: 2px solid #d8d8d8;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.disalbeButton{
+  background-color: #d8d8d8;
+  cursor: not-allowed;
+}
+/* *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -210,7 +222,6 @@ body{
   position: relative;
   width: 220px;
   border: 1px solid #ccc;
-  /* background-color: red; */
   margin-right: 20px;
   border-radius: 20px;
   cursor: pointer;
@@ -226,7 +237,6 @@ body{
 }
 
 .box .avator{
-  /* margin-top: 25px; */
   position: relative;
   top: -188px;
   left: 22%;
@@ -267,7 +277,6 @@ body{
   background-color: rgb(89, 88, 89);
 }
 .box .show .d1{
-  /* position: absolute; */
   padding: 5px 20px;
   float: left;
   border: 1px solid #fff;
@@ -282,6 +291,6 @@ body{
   border-radius: 20px;
   padding: 5px 20px;
   font-size: 10px;
-}
+} */
 
 
