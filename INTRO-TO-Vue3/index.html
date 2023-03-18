@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <!-- 挂载到这 -->
     <div id="root">
         <!-- <div  class="box" v-for ="(item,index) in details" ::key="index">
@@ -61,8 +60,6 @@
                     </div>
                     <button class="button" :class="{disalbeButton:!inStock}" :disabled="!inStock" v-on:click="addTochart">Add to Cart</button>
                     <button class="button" @click="removechart">Remove Item</button>
-
-                
                     <!-- 启动或禁用按钮 -->
                     <!-- <div>
                         <button :disabled="count<3">button</button>

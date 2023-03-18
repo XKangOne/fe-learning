@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计数器练习</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id='app'>
+        <main>
+            <h1>计数器练习</h1>
+            <div class="container">
+                <div class="centerBox">
+                    <div class="box" :style="{width:width + '%'}" :class="width>10 ? 'active' : ''"></div>
+                </div>
+            </div>
+            <div id="value" :style="{color:changeColor}">{{ num }}
+                <button @click="less" class="btn btn1">-</button>
+                <button @click="reset" class="btn btn2">重置</button>
+                <button @click="add" class="btn bt3">+</button>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./main1.js"></script>
+    <script>
+        const mountApp = app.mount('#app');
+    </script>
+</body>
+
+</html>

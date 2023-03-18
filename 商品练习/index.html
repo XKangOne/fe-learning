@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<!-- 
+1、创建商品列表组件,可以接收一个Array类型的属性（传入一组商品信息），在组件内进行列表渲染及相关操作
+2、创建商品详情组件,可以接收一个Object类型的属性（输入一个商品详情信息），在组件内进行数据渲染及相关操作
+3、在 index.html中引入1、2两种组件,如果用商品列表组件,
+则在父组件定义商品信息数组传入；如果用商品详情组件，
+则在父组件用 v-for 包裹商品详情组件，每次循环传入一个商品信息对象
+ -->
+<body>
+    <div id="root">
+        <p class="d3">水果商城</p>
+        <div class="d1">
+            <shop-list :list="fruit" @change-detail="changeDetail($event)"/>
+        </div>
+        <!-- <div class="d2">
+            <shop-details :yu="details"></shop-details>
+        </div> -->
+
+        <!-- 在js中类型为type 在这里进行遍历 -->
+        <div v-for="(item,index) in details" :key="index">
+            <shop-details :yu="item"></shop-details>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js"></script>
+    <script src="./components/shop-list.js"></script>
+    <script src="./components/shop-details.js"></script>
+    <script>
+        const mountedApp = app.mount("#root")
+    </script>
+</body>
+</html>

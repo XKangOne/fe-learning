@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <!-- 挂载到这 -->
+    <div id="root">
+        <div class="box" v-for="(item,index) in details" ::key="index">
+            <div class="header">
+
+                <img :src="item.image" class="activeClass" @mouseover="change(item)" @mouseleave="change(item)">
+
+            </div>
+            <div class="avator">
+                <img :src="item.imgs">
+                <p>{{item.name}}</p>
+            </div>
+
+            <div class="show" v-show="item.isShow && !item.finished">
+                <p class="d1">{{item.lable1}}</p>
+                <p class="d2">{{item.lable2}}</p>
+            </div>
+
+            <div class="content">
+                <p class="t1">{{item.subject}}</p>
+                <p class="t2">{{item.class}}</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./main.js"></script>
+    <!-- Mount app -->
+    <script>
+        const mountedApp = app.mount('#root')
+    </script>
+</body>
+
+</html>

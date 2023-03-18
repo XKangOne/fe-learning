@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            /* 默认横方向排序 */
+            display: flex;
+
+            /* 居中对齐 */
+            /* justify-content: center; */
+
+            /* 靠右对齐 */
+            /* justify-content: end; */
+
+            /* 左右两端对齐，且项目之间的间距相等 */
+            /* justify-content: space-between; */
+
+            /* 项目间距两侧项目到容器间距的二倍 */
+            /* justify-content: space-around; */
+
+            /* 项目之间间距与项目与容器间距相等 */
+            /* justify-content: space-evenly; */
+
+            /*默认值位置*/
+            /* align-items: flex-start; */
+
+            /* 交叉轴居中排列 */
+            /* align-items: center; */
+
+            /* 靠着交叉轴底部对齐 */
+            /* align-items: flex-end; */
+
+            /* 下面两个同时设置，会进行水平居中 */
+            /* align-items: center;
+            justify-content: center; */
+
+            /* 默认值，按行排列 */
+            /* flex-direction: row; */
+
+            /* 项目排序会进行反转 */
+            /* flex-direction: row-reverse; */
+
+            /* 纵向排序 */
+            /* flex-direction: column; */
+
+            /* 反转纵向排序 */
+            flex-direction: column-reverse;
+
+            /* 排序反转 */
+            /* flex-direction: row-reverse; */
+        }
+        .box{
+            width: 30px;
+            height: 30px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">a</div>
+    <div class="box">b</div>
+    <div class="box">c</div>
+</body>
+</html>
